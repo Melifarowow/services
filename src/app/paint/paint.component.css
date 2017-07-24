@@ -1,0 +1,9 @@
+md-card {
+    max-width: 380px;
+    margin: 20px auto;
+}
+md-card-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}

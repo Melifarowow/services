@@ -1,0 +1,37 @@
+<form [formGroup]="paintForm" (ngSubmit)="calc()">
+<md-card>
+    <md-card-title>
+      Расчет количества краски
+    </md-card-title>
+    <md-card-content>
+      <md-input-container>
+        <input mdInput placeholder="Ширина комнаты (м)" formControlName="width" type="text">
+        <md-error>От 1 до 1000</md-error>
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Длина комнаты (м)" formControlName="length" type="text">
+        <md-error>От 1 до 1000</md-error>
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Высота комнаты (м)" formControlName="height" type="text">
+        <md-error>От 1 до 100</md-error>
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Кол-во слоев комнаты" formControlName="layers" type="text">
+        <md-error>От 1 до 4-х</md-error>
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Расход на 1 м2" formControlName="spend" type="text">
+        <md-error>От 0.1 до 0.5</md-error>
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Цена за 5 литров (грн)" formControlName="price" type="text">
+        <md-error>От 1 до 1000</md-error>
+      </md-input-container>
+      <p *ngIf="message">{{message}}</p>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button type="submit" [disabled]="paintForm.invalid" color="primary">Calc</button>
+    </md-card-actions>
+</md-card>
+</form>

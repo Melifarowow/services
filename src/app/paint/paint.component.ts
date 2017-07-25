@@ -58,7 +58,7 @@ export class PaintComponent implements OnInit {
         Validators.max(1000)
       ]]
     })
-    this.paintForm.valueChanges.subscribe(data => this.calc())
+    this.paintForm.valueChanges.subscribe(() => this.calc())
   }
 
   calc() {

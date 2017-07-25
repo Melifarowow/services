@@ -1,3 +1,25 @@
-<p>
-  converter works!
-</p>
+<form [formGroup]="converterForm" (ngSubmit)="convert()">
+  <md-card>
+    <md-card-title>Конвертер валют</md-card-title>
+    <md-card-content>
+      <md-select placeholder="From" formControlName="from">
+        <md-option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency.label }}
+        </md-option>
+      </md-select>
+      <md-select placeholder="To" formControlName="to">
+        <md-option *ngFor="let currency of currencies" [value]="currency">
+          {{ currency.label }}
+        </md-option>
+      </md-select>
+      <md-input-container>
+        <input mdInput placeholder="Сумма" formControlName="amount" type="text">
+        <md-error>От 0.01 до 1 000 000</md-error>
+      </md-input-container>
+      <button md-button color="accent" *ngIf="result">Вы получите: {{result | number:'.2'}}</button>
+    </md-card-content>
+    <md-card-actions>
+      <button md-button type="submit" color="primary" [disabled]="converterForm.invalid">Конвертировать</button>
+    </md-card-actions>
+  </md-card>
+</form>

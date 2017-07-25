@@ -1,0 +1,18 @@
+md-card {
+    max-width: 380px;
+    margin: 16px auto;
+}
+md-card-content {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+md-select, md-input-container, md-card-content button {
+    flex: 1 1 48%;
+    max-width: 48%;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+}
+md-select {
+    margin-top: 16px !important;
+}

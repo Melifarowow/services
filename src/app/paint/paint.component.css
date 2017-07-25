@@ -1,6 +1,6 @@
 md-card {
     max-width: 380px;
-    margin: 20px auto;
+    margin: 16px auto;
 }
 md-card-content {
   display: flex;

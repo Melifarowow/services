@@ -16,8 +16,8 @@ class ConverterFormModel {
 export class ConverterService {
   currencies: Array<Currency> = [
     { id: 0, label: 'UAH', value: 1 },
-    { id: 1, label: 'USD', value: 25.88970 },
-    { id: 2, label: 'EUR', value: 30.14 }
+    { id: 1, label: 'USD', value: 0.039 },
+    { id: 2, label: 'EUR', value: 0.033 }
   ]
   constructor() { }
 

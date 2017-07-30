@@ -15,7 +15,7 @@ export class PaintService {
   constructor() {}
 
   private square({width, length, height}): number {
-    return width * length * height
+    return (width * height * 2) + (length * height * 2)
   }
 
   private litres(square: number, {spend, layers}): number {
